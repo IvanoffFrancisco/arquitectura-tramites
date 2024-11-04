@@ -1,0 +1,83 @@
+body{
+    font-family: "Poppins", sans-serif;
+    background-color: var(--body-color-dark);
+    background-image: url('../css/assets/img/logo_transparente.png');
+    background-size: 30%;
+    background-position: center;
+    background-repeat: no-repeat ;
+}
+
+.bg-login {
+    background-color: var(--body-color-dark);
+    background-image: url('../css/assets/img/logo_transparente.png');
+    background-size: 12%;
+    background-position: center calc(100% - 50px);
+    background-repeat: no-repeat ;
+}
+
+:root{/*Evitar selecciòn*/
+    -moz-user-select: none; /* Firefox */
+    -ms-user-select: none; /* Internet Explorer */
+    -khtml-user-select: none; /* KHTML browsers (e.g. Konqueror) */
+    -webkit-user-select: none; /* Chrome, Safari, and Opera */
+    -webkit-touch-callout: none; /* Disable Android and iOS callouts*/
+
+    /*colores para un darkTheme*/
+    --color-principal       : #52A5E0;
+    --color-titulos         : #EFF3F5;
+    --color-textos          : #ffffff;
+    --color-textos-claros   : #A0A7AC;
+    --color-borde           : #2A3B47;
+    --container-color-dark  : #212E36;
+    --body-color-dark       : #192229;
+
+    /*colores para un tema claro*/
+    --main-color       : #1083D6;
+    --title-color      : #2A3B47;
+    --text-color       : #697477;
+    --light-text-color : #A0A7AC;
+    --border-color     : #EFF3F5;
+    --container-color  : #FFFFFF;
+    --body-color       : #FBFBFE;
+
+    /*sombra en las cajas*/
+    --container-background : #fff;
+    --container-shadow     : 0 1px 4px rgba(146,161,176,.15);
+
+/*******************************************
+Parámetros para estilar el panel de métricas
+*******************************************/
+    --margen-en-linea: 10px;/*margin-inline*/ 
+    --margen-superior: 10px;/*margin-top*/
+    
+}
+
+/*********************************
+DANDO SCROLL DENTRO DE UN ELEMENTO
+MANTENIENDO 100% DEL VH
+*********************************/
+.scrollVertical{
+    height: 100vh;
+    overflow-y: scroll;
+}
+
+
+/*********************************
+ESTILANDO EL SCROLL A NIVEL GLOBAL
+*********************************/
+*::-webkit-scrollbar {/* Estilos para SCROLL DEL CONTENEDOR  (Chrome, Safari) */
+    width: 6px; /* Ancho de la barra de desplazamiento */
+}
+
+*::-webkit-scrollbar-track {
+    background-color: #343a40; /* Color de fondo de la barra de desplazamiento */
+}
+
+*::-webkit-scrollbar-thumb {
+    background-color: #888; /* Color del "scroll thumb" */
+    border-radius: 5px; /* Radio de borde del "scroll thumb" */
+}
+
+*::-webkit-scrollbar-thumb:hover {
+    background-color: palevioletred; /* Cambio de color al pasar el cursor sobre el "scroll thumb" */
+}
