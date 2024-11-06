@@ -1,7 +1,7 @@
 import React from 'react'
 
-import '../../css/navBar/estilosNav.css';
-import '../../css/estilosMain.css'
+import '../../css/components/navBar/estilosNav.css';
+import '../../css/components/estilosMain/estilosMain.css'
 
 //ICONOS
 import UpdateIcon from '@mui/icons-material/Update';
@@ -118,3 +118,5 @@ export default function Navbar() {
     </div>
     )
     }
+
+

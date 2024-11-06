@@ -1,0 +1,22 @@
+/*********************************
+DANDO SCROLL DENTRO DE UN ELEMENTO
+MANTENIENDO 100% DEL VH
+*********************************/
+.scrollVertical{
+    height: 100vh;
+    overflow-y: scroll;
+}
+
+
+
+.ContenedorDdjj{
+    width: 100vw;
+    display: grid;
+    grid-template-columns: 0.1fr 2fr;
+}
+.titulo{
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    color: #fff;
+    text-align: center;
+    padding-top: 30px;
+}

@@ -82,15 +82,8 @@ ESTILANDO EL SCROLL A NIVEL GLOBAL
     background-color: palevioletred; /* Cambio de color al pasar el cursor sobre el "scroll thumb" */
 }
 
-
 .ContenedorDdjj{
     width: 100vw;
     display: grid;
     grid-template-columns: 0.1fr 2fr;
-}
-.titulo{
-    font-family: Verdana, Geneva, Tahoma, sans-serif;
-    color: #fff;
-    text-align: center;
-    padding-top: 30px;
 }
