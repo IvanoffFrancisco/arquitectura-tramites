@@ -5,7 +5,10 @@ import MigaDePan from '../../components/breadcrumbs/migaDePan'
 import TravelExploreIcon from '@mui/icons-material/TravelExplore';//Icono Buscar
 //CSS
 import '../../css/components/breadcrumbs/estilosBreadcrumbs.css'
+import '../../css/components/navBar/estilosNav.css'
 import '../../css/layout.css'
+import '../../css/responsive.css'
+import '../../css/global.css'
 
 
 
@@ -13,13 +16,11 @@ import '../../css/layout.css'
 export default function Principal() {
 return (
         <>
-            <div className='ContenedorDdjj' >
+            <div className='Contenedor' >
                 <div >
                     <Navbar/>
                 </div>
-                <div className='scrollVertical'>
                     <MigaDePan contenido1={<TravelExploreIcon style={{fontSize: '30px'}}/>} contenido2= {"Bienvenido"}/>
-                </div>
             </div>
         </>
 )

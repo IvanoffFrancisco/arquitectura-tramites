@@ -1,0 +1,105 @@
+/* Estilos para móviles (pantallas hasta 480px) */
+@media (max-width: 480px) {
+    .Contenedor {
+        display: flex !important;
+        flex-direction: column-reverse !important;
+        display: grid;
+        grid-template-columns: 0.1fr 2fr;
+    }
+
+    .body {
+        display: grid;
+        height: 100vh;
+        font-family: "Poppins", sans-serif;
+        backdrop-filter: blur(10px);
+        background-color: var(--body-color-dark);
+        font-size: 0.5rem;
+        overflow-y: auto;
+    }
+
+    .nav {
+        position: fixed; /* Fija la barra en la parte inferior del viewport */
+        bottom: 0; /* Coloca la barra en la parte inferior */
+        left: 0; /* Asegura que esté alineada al borde izquierdo */
+        width: 100%; /* Hace que ocupe todo el ancho de la pantalla */
+        height: 50%; /* Ajusta la altura de la barra */
+        background-color: #333; /* Color de fondo de la barra */
+        display: grid; /* Usamos grid en lugar de flexbox */
+        grid-template-columns: repeat(3, 1fr); /* 3 columnas en la primera fila */
+        grid-template-rows: repeat(2, 1fr); /* 2 filas en total */
+        gap: 10px; /* Espacio entre los elementos */
+        padding: 10px; /* Espacio interno de la barra */
+        border-top: 1px solid #444; /* Agrega un borde superior para el diseño */
+        z-index: 1000; /* Asegura que esté por encima de otros elementos */
+        box-sizing: border-box;
+        overflow-x: auto;
+        overflow-y: hidden;
+        font-size: x-small;
+    }
+
+    .nav__list{
+        display: grid; /* Usamos grid también aquí */
+        align-items: center;
+        grid-template-columns: repeat(3, 1fr); /* 3 columnas */
+        grid-template-rows: 1fr 1fr; /* 2 filas */
+        width: 100%;
+        padding: 0;
+        margin: 0;
+        gap: 10px;
+    }
+    .nav__item--down {
+        display: grid;
+        align-items: center;
+        padding: 0;
+        margin: 0;
+        font-size: x-small;
+    }
+    .nav__item--user {
+        display: grid;
+        align-items: center;
+        padding: 0;
+        margin: 0;
+    }
+    .nav__item {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        padding: 5px;
+    }
+
+    .nav__icon {
+        font-size: 24px;
+    }
+
+    .nav__text {
+        font-size: 10px;
+        margin-top: 2px;
+    }
+}
+
+
+/* Estilos para tablets (pantallas entre 481px y 768px) */
+@media (min-width: 481px) and (max-width: 768px) {
+
+}
+
+/* Estilos para escritorios pequeños (pantallas entre 769px y 1024px) */
+@media (min-width: 769px) and (max-width: 1024px) {
+    
+
+}
+
+/* Estilos para escritorios grandes (pantallas a partir de 1025px) */
+@media (min-width: 1025px) {
+    .Contenedor{
+        width: 100vw;
+        display: grid;
+        grid-template-columns: 0.1fr 2fr;
+
+    }
+}
+
+/* Estilos para escritorios muy grandes (pantallas a partir de 1440px) */
+@media (min-width: 1440px) {
+
+}

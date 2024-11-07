@@ -1,7 +1,10 @@
 import React from 'react'
 
 import '../../css/components/navBar/estilosNav.css';
-import '../../css/components/estilosMain/estilosMain.css'
+import '../../css/responsive.css'
+import '../../css/layout.css'
+import '../../css/global.css'
+
 
 //ICONOS
 import UpdateIcon from '@mui/icons-material/Update';
@@ -119,4 +122,32 @@ export default function Navbar() {
     )
     }
 
-
+/* 
+    export default function Navbar() {
+        return (
+            <nav className="nav">
+                <ul className="nav__list">
+                    <li className="nav__item">
+                        <BrowserUpdatedIcon className="nav__icon" />
+                        <span className="nav__text">Actualizaciones</span>
+                    </li>
+                    <li className="nav__item">
+                        <ReportGmailerrorredIcon className="nav__icon" />
+                        <span className="nav__text">Trámites</span>
+                    </li>
+                    <li className="nav__item">
+                        <UpdateIcon className="nav__icon" />
+                        <span className="nav__text">Historial</span>
+                    </li>
+                    <li className="nav__item">
+                        <MapIcon className="nav__icon" />
+                        <span className="nav__text">Mapas</span>
+                    </li>
+                    <li className="nav__item">
+                        <LogoutIcon className="nav__icon" />
+                        <span className="nav__text">Cerrar Sesión</span>
+                    </li>
+                </ul>
+            </nav>
+        );
+    } */

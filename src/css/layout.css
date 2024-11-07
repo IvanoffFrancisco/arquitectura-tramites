@@ -2,7 +2,7 @@
 DANDO SCROLL DENTRO DE UN ELEMENTO
 MANTENIENDO 100% DEL VH
 *********************************/
-.scrollVertical{
+/* .scrollVertical{
     height: 100vh;
     overflow-y: scroll;
 }
@@ -19,4 +19,4 @@ MANTENIENDO 100% DEL VH
     color: #fff;
     text-align: center;
     padding-top: 30px;
-}
+} */
