@@ -1,0 +1,41 @@
+
+@media (max-width: 480px) {
+/* Ocultar el menú cuando está en estado "hidden" */
+    .nav-hidden {
+        transform: translateY(120%);
+        opacity: 0; /* Añade una animación de desvanecimiento */
+        visibility: hidden; /* Hace que el contenedor no ocupe espacio cuando está oculto */
+        pointer-events: none;
+        overflow-y: hidden;
+    }
+
+    /* Mostrar el menú cuando está en estado "visible" */
+    .nav-visible {
+        transform: translateY(0);
+        opacity: 1;
+        visibility: visible;
+        pointer-events: auto;
+    }
+
+    /* Botón de alternar menú (solo visible en pantallas móviles) */
+    .toggle-button {
+        display: block;
+        position: fixed;
+        bottom: 100px; /* Ajusta según tu preferencia */
+        left: 50%;
+        transform: translateX(-50%);
+        padding: 10px 20px;
+        background-color: #007bff;
+        color: #fff;
+        border: none;
+        border-radius: 25px;
+        cursor: pointer;
+        z-index: 1100;
+        display: block;
+        transition: background-color 0.3s;
+    }
+
+    .toggle-button:hover {
+        background-color: #0056b3;
+    }
+}

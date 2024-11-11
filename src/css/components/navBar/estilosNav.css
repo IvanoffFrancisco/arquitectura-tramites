@@ -84,10 +84,10 @@
 
 .nav__show{
     overflow: hidden;
+
 }
 
 .nav__name{
-    
     text-wrap: nowrap;
 }
 
@@ -120,26 +120,18 @@
 /*scroll*/
 .body::-webkit-scrollbar {/* Estilos para SCROLL DEL CONTENEDOR  (Chrome, Safari) */
     width: 5px; /* Ancho de la barra de desplazamiento */
-  }
-  
+}
+
 .body::-webkit-scrollbar-track {
     background-color: #343a40; /* Color de fondo de la barra de desplazamiento */
-  }
-  
+}
+
 .body::-webkit-scrollbar-thumb {
     background-color: #888; /* Color del "scroll thumb" */
     border-radius: 5px; /* Radio de borde del "scroll thumb" */
-  }
-  
+}
+
 .body::-webkit-scrollbar-thumb:hover {
     background-color: #555; /* Cambio de color al pasar el cursor sobre el "scroll thumb" */
-  }
-  
-/*********************************
-Sistema Responsive para Celus
-*********************************/
+}
 
-@media only screen and (max-width: 767px) {
-
-
-} 

@@ -1,5 +1,18 @@
 /* Estilos para móviles (pantallas hasta 480px) */
-@media (max-width: 480px) {
+@media (max-width: 480px), (orientation: portrait)  {
+    /*AJUSTE DE ICONOS*/
+    .PendingActionsIcon, .ReportGmailerrorredIcon, .UpdateIcon,
+    .MapIcon, .LogoutIcon {
+        font-size: 40px !important;
+    }
+
+
+
+
+    body{
+        
+        overflow-x: hidden;
+    }
     .Contenedor {
         display: flex !important;
         flex-direction: column-reverse !important;
@@ -9,39 +22,42 @@
 
     .body {
         display: grid;
-        height: 100vh;
+        height: 100dvh;
         font-family: "Poppins", sans-serif;
         backdrop-filter: blur(10px);
         background-color: var(--body-color-dark);
         font-size: 0.5rem;
-        overflow-y: auto;
+        overflow-y: hidden;
     }
 
     .nav {
         position: fixed; /* Fija la barra en la parte inferior del viewport */
-        bottom: 0; /* Coloca la barra en la parte inferior */
+        bottom: 50px; /* Coloca la barra en la parte inferior */
         left: 0; /* Asegura que esté alineada al borde izquierdo */
         width: 100%; /* Hace que ocupe todo el ancho de la pantalla */
-        height: 50%; /* Ajusta la altura de la barra */
+        height: 60%; /* Ajusta la altura de la barra */
         background-color: #333; /* Color de fondo de la barra */
         display: grid; /* Usamos grid en lugar de flexbox */
-        grid-template-columns: repeat(3, 1fr); /* 3 columnas en la primera fila */
+        
         grid-template-rows: repeat(2, 1fr); /* 2 filas en total */
         gap: 10px; /* Espacio entre los elementos */
         padding: 10px; /* Espacio interno de la barra */
         border-top: 1px solid #444; /* Agrega un borde superior para el diseño */
         z-index: 1000; /* Asegura que esté por encima de otros elementos */
         box-sizing: border-box;
-        overflow-x: auto;
+        overflow-x: hidden;
         overflow-y: hidden;
         font-size: x-small;
+        transition: transform 0.3s ease-in-out;
+        visibility: visible;
+        opacity: 1;
     }
 
     .nav__list{
         display: grid; /* Usamos grid también aquí */
         align-items: center;
         grid-template-columns: repeat(3, 1fr); /* 3 columnas */
-        grid-template-rows: 1fr 1fr; /* 2 filas */
+        grid-template-rows: repeat(2, 1fr); /* 2 filas */
         width: 100%;
         padding: 0;
         margin: 0;
@@ -75,17 +91,28 @@
         font-size: 10px;
         margin-top: 2px;
     }
+    .nav__name{
+        text-align: center;
+        text-wrap: nowrap;
+    }
+    
 }
 
 
 /* Estilos para tablets (pantallas entre 481px y 768px) */
 @media (min-width: 481px) and (max-width: 768px) {
-
+    /*Ocultando botón de menú en dispositivos mas grandes*/
+    .toggle-button {
+        display: none !important;
+    }
 }
 
 /* Estilos para escritorios pequeños (pantallas entre 769px y 1024px) */
 @media (min-width: 769px) and (max-width: 1024px) {
-    
+    /*Ocultando botón de menú en dispositivos mas grandes*/
+    .toggle-button {
+        display: none !important;
+    }
 
 }
 
@@ -97,9 +124,16 @@
         grid-template-columns: 0.1fr 2fr;
 
     }
+    /*Ocultando botón de menú en dispositivos mas grandes*/
+    .toggle-button {
+        display: none !important;
+    }
 }
 
 /* Estilos para escritorios muy grandes (pantallas a partir de 1440px) */
 @media (min-width: 1440px) {
-
+    /*Ocultando botón de menú en dispositivos mas grandes*/
+    .toggle-button {
+        display: none !important;
+    }
 }

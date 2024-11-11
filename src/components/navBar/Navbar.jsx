@@ -1,6 +1,8 @@
+import { useState } from 'react';
 import React from 'react'
 
 import '../../css/components/navBar/estilosNav.css';
+import '../../css/components/navBar/btnNav/btnNav.css'
 import '../../css/responsive.css'
 import '../../css/layout.css'
 import '../../css/global.css'
@@ -11,56 +13,45 @@ import UpdateIcon from '@mui/icons-material/Update';
 import LogoutIcon from '@mui/icons-material/Logout';
 import MapIcon from '@mui/icons-material/Map';
 import ReportGmailerrorredIcon from '@mui/icons-material/ReportGmailerrorred';
-import BrowserUpdatedIcon from '@mui/icons-material/BrowserUpdated';
+import MenuIcon from '@mui/icons-material/Menu';
+import CloseIcon from '@mui/icons-material/Close';
+import PendingActionsIcon from '@mui/icons-material/PendingActions';
 
-
-
-//TOGGLE
-import Box from '@mui/material/Box';
-import { SimpleTreeView } from '@mui/x-tree-view/SimpleTreeView';
-
-import { TreeItem2 } from '@mui/x-tree-view/TreeItem2';//Caracterisitica  nueva de MUIX q reemplaza a "TreeItem"
-
-function BasicSimpleTreeView({tituloMapaGeneral, urlMapaGeneral, tituloOtrosMapas}) {
-    return (
-    <Box sx={{ height: 1, flexGrow: 1, maxWidth: 400 }}>
-        <SimpleTreeView>
-            <TreeItem2 itemId="grid" label="Mapas">
-                <a className='nav__item nav__name' href={urlMapaGeneral} target="_blank" >
-                    <TreeItem2 itemId="1" label={tituloMapaGeneral}/>
-                </a>
-                <a className='nav__item nav__name' href="#">
-                    <TreeItem2 itemId="2" label={tituloOtrosMapas} />
-                </a>
-            </TreeItem2>
-        </SimpleTreeView>
-    </Box>
-    );
-}
 
 
 export default function Navbar() {
+    
+/**Botón para mostrar/ocultar menú */
+    const [isNavVisible, setIsNavVisible] = useState(false);
+
+    //Función para alternar la visibilidad del menú
+    const toggleNav = () => {
+        setIsNavVisible(prevState => !prevState);
+    };
+
+
     return (
         <div className="body">
-        <nav className="nav">
+        <nav className={`nav ${isNavVisible ? 'nav-visible' : 'nav-hidden'}`}>
+
 
 
         <ul className="nav__list">
             <li className="nav__item">
                 <figure className="nav__figure">
-                    <BrowserUpdatedIcon style={{fontSize: '30px'}} />
+                    <PendingActionsIcon className='PendingActionsIcon' style={{fontSize: '30px'}} />
                 </figure>
                 <article className="nav__show">
                     <a href="#" style={{color:'#fff', textDecoration: 'none'}}>
                         <p className="nav__name">
-                            Actualizaciones 
+                            Mis tramites 
                         </p>
                     </a>
                 </article>
             </li>
             <li className="nav__item">
                 <figure className="nav__figure">
-                    <ReportGmailerrorredIcon style={{fontSize: '30px'}} />
+                    <ReportGmailerrorredIcon className='ReportGmailerrorredIcon' style={{fontSize: '30px'}} />
                 </figure>
                 <article className="nav__show">
                     <a href="#" style={{color:'#fff', textDecoration: 'none'}}>
@@ -72,7 +63,7 @@ export default function Navbar() {
             </li>
             <li className="nav__item">
                 <figure className="nav__figure">
-                    <UpdateIcon style={{fontSize: '30px'}} />
+                    <UpdateIcon className='UpdateIcon' style={{fontSize: '30px'}} />
                 </figure>
                 <article className="nav__show">
                 <a href="#" style={{color:'#fff', textDecoration: 'none'}}>
@@ -82,25 +73,26 @@ export default function Navbar() {
                     </a>
                 </article>
             </li>
+            
             <li className="nav__item">
+            <a href="http://172.16.1.58/webMapContribuyente/" style={{color:'#fff', textDecoration: 'none'}}>
                 <figure className="nav__figure">
-                    <MapIcon style={{fontSize: '30px'}} />
+                    <MapIcon className='MapIcon' style={{fontSize: '30px'}} />
                 </figure>
                 <article className="nav__show">
-                            <BasicSimpleTreeView 
-                            tituloMapaGeneral= {"Base Catastral"} 
-                            urlMapaGeneral= {"http://172.16.1.58/webMapContribuyente/"} 
-                            tituloOtrosMapas={"Proximamente..."}
-                            />
+                
+                        <p className="nav__name">
+                            Mapa
+                        </p>
                 </article>
+            </a>
             </li>
-
             <li className="nav__item nav__item--down">
                 <figure className="nav__figure">
-                    <LogoutIcon style={{fontSize: '30px'}} />
+                    <LogoutIcon className='LogoutIcon' style={{fontSize: '30px'}} />
                 </figure>
                 <article className="nav__show">
-                    <button className='cerrarSesion'>Cerrar Sesión</button>
+                    <p className='nav__name'>Cerrar Sesión</p>
                 </article>
             </li>
 
@@ -118,6 +110,11 @@ export default function Navbar() {
         </ul>
 
     </nav>
+
+    {/* Botón para alternar menú */}
+    <button className='toggle-button' onClick={toggleNav}> 
+        {isNavVisible ? <CloseIcon style={{fontSize: '30px'}} /> : <MenuIcon style={{fontSize: '30px'}} />}
+    </button>
     </div>
     )
     }

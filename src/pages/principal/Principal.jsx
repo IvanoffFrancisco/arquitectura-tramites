@@ -6,6 +6,7 @@ import TravelExploreIcon from '@mui/icons-material/TravelExplore';//Icono Buscar
 //CSS
 import '../../css/components/breadcrumbs/estilosBreadcrumbs.css'
 import '../../css/components/navBar/estilosNav.css'
+import '../../css/components/navBar/btnNav/btnNav.css'
 import '../../css/layout.css'
 import '../../css/responsive.css'
 import '../../css/global.css'
