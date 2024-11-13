@@ -113,7 +113,11 @@
     .toggle-button {
         display: none !important;
     }
-
+    .Contenedor{
+        width: 100vw;
+        display: grid;
+        grid-template-columns: 0.1fr 2fr;
+    }
 }
 
 /* Estilos para escritorios grandes (pantallas a partir de 1025px) */
@@ -127,6 +131,11 @@
     /*Ocultando botón de menú en dispositivos mas grandes*/
     .toggle-button {
         display: none !important;
+    }
+    .Contenedor{
+        width: 100vw;
+        display: grid;
+        grid-template-columns: 0.1fr 2fr;
     }
 }
 

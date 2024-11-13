@@ -3,6 +3,8 @@ import React from 'react'
 import {BrowserRouter,Routes,Route} from 'react-router-dom'
 import Principal from '../src/pages/principal/Principal'
 
+import MisTramites from '../src/pages/misTramites/MisTramites'
+
 
 export default function Rutas() {
   return (
@@ -10,6 +12,7 @@ export default function Rutas() {
         <Routes>
             {/* <!--Ruta= lo que escribe en la URL / paginas > */}
             <Route path='/Principal' element={<Principal/>} />
+            <Route path='/MisTramites' element={<MisTramites/>} />
             <Route path="*" element={<div>404</div> } />
         </Routes>
     </BrowserRouter>
