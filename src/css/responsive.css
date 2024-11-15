@@ -1,49 +1,50 @@
-/* Estilos para móviles (pantallas hasta 480px) */
+/* #region Mobile max-width 480px */
+/* #tag Mobile Estilos para móviles (pantallas hasta Mobile)max-width 480px*/
 @media (max-width: 480px), (orientation: portrait)  {
+    /* #tag NAV Diseño del menú Nav responsive */
     /*AJUSTE DE ICONOS*/
     .PendingActionsIcon, .ReportGmailerrorredIcon, .UpdateIcon,
     .MapIcon, .LogoutIcon {
         font-size: 40px !important;
     }
-
-
-
-
     body{
-        
         overflow-x: hidden;
     }
     .Contenedor {
-        display: flex !important;
-        flex-direction: column-reverse !important;
+        width: 100vw;
         display: grid;
-        grid-template-columns: 0.1fr 2fr;
+        grid-template-columns: 0.1fr 2fr;   
     }
+    
 
     .body {
-        display: grid;
-        height: 100dvh;
+        position: fixed; /* Asegura que esté por encima de otros elementos */
+        top: 0;
+        left: 0;
+        width: 100vw;
+        height: 100dvh; /* Usa 100dvh para asegurar que ocupe todo el viewport */
+        overflow-y: hidden; /* Permite scroll si hay contenido extra */
+        z-index: 2000; /* Asegura que esté por encima del menú u otros elementos */
+        backdrop-filter: blur(0px);
+        background-color: transparent; /* Fondo semi-transparente */
         font-family: "Poppins", sans-serif;
-        backdrop-filter: blur(10px);
-        background-color: var(--body-color-dark);
-        font-size: 0.5rem;
-        overflow-y: hidden;
+        color: white; /* Cambia según tus preferencias */
     }
 
+
     .nav {
-        position: fixed; /* Fija la barra en la parte inferior del viewport */
-        bottom: 50px; /* Coloca la barra en la parte inferior */
-        left: 0; /* Asegura que esté alineada al borde izquierdo */
-        width: 100%; /* Hace que ocupe todo el ancho de la pantalla */
-        height: 60%; /* Ajusta la altura de la barra */
-        background-color: #333; /* Color de fondo de la barra */
-        display: grid; /* Usamos grid en lugar de flexbox */
-        
-        grid-template-rows: repeat(2, 1fr); /* 2 filas en total */
-        gap: 10px; /* Espacio entre los elementos */
-        padding: 10px; /* Espacio interno de la barra */
-        border-top: 1px solid #444; /* Agrega un borde superior para el diseño */
-        z-index: 1000; /* Asegura que esté por encima de otros elementos */
+        position: fixed; 
+        bottom: 50px; 
+        left: 0; 
+        width: 100%; 
+        height: 60%; 
+        background-color: #333; 
+        display: grid; 
+        grid-template-rows: repeat(2, 1fr); 
+        gap: 10px; 
+        padding: 10px; 
+        border-top: 1px solid #444; 
+        z-index: 1000; /* Debe ser menor que el .body para estar por debajo */
         box-sizing: border-box;
         overflow-x: hidden;
         overflow-y: hidden;
@@ -52,12 +53,14 @@
         visibility: visible;
         opacity: 1;
     }
+    
+    
 
     .nav__list{
-        display: grid; /* Usamos grid también aquí */
+        display: grid; 
         align-items: center;
-        grid-template-columns: repeat(3, 1fr); /* 3 columnas */
-        grid-template-rows: repeat(2, 1fr); /* 2 filas */
+        grid-template-columns: repeat(3, 1fr); 
+        grid-template-rows: repeat(2, 1fr); 
         width: 100%;
         padding: 0;
         margin: 0;
@@ -95,19 +98,46 @@
         text-align: center;
         text-wrap: nowrap;
     }
-    
+
+/* #tag Tarjetas Diseño responsive de las tarjetas de tramites */
+
+.cajaPadre {/*Tarjeta*/
+    display: grid;
+    grid-template-columns: 100px;
+    grid-template-areas: 
+    'expte    nombre'
+    'progreso progreso';
+    background-color: var(--container-color-dark);
+    border-radius: 26px;
+    padding: 20px;
+    transition: background-color 0.3s ease-in-out; /* Suaviza solo el cambio de color */
+    outline: none;
+    border: none;
+    cursor: pointer;
+    margin-block: 5px;
+}
+.tarjeta {
+    overflow-y: auto !important;
 }
 
+}
+/* #endregion Mobile */
 
-/* Estilos para tablets (pantallas entre 481px y 768px) */
+
+/* #region Tablets 481 & 768 */
+/* #tag Tablets: Estilos para tablets (pantallas entre 481px y 768px) */
 @media (min-width: 481px) and (max-width: 768px) {
     /*Ocultando botón de menú en dispositivos mas grandes*/
     .toggle-button {
         display: none !important;
     }
 }
+/* #endregion Tablets */
 
-/* Estilos para escritorios pequeños (pantallas entre 769px y 1024px) */
+
+
+/* #region MonitoresPequeños 769 & 1024 */
+/* #tag  Estilos para escritorios pequeños (pantallas entre 769px y 1024px) */
 @media (min-width: 769px) and (max-width: 1024px) {
     /*Ocultando botón de menú en dispositivos mas grandes*/
     .toggle-button {
@@ -118,31 +148,97 @@
         display: grid;
         grid-template-columns: 0.1fr 2fr;
     }
-}
 
-/* Estilos para escritorios grandes (pantallas a partir de 1025px) */
+    /* #tag Tarjetas Diseño de tarjetas para MisTramites */
+    .cajaPadre {
+        display: grid;
+        grid-template-columns: 100px;
+        grid-template-areas: 
+        'expte    nombre'
+        'progreso progreso';
+        background-color: var(--container-color-dark);
+        border-radius: 26px;
+        padding: 20px;
+        transition: background-color 0.3s ease-in-out; /* Suaviza solo el cambio de color */
+        outline: none;
+        border: none;
+        cursor: pointer;
+        margin-block: 5px;
+        width: 80%;
+    }
+    
+}
+/* #endregion name */
+
+
+/* #region Monitores 1025px */
+/* #tag Estilos para escritorios grandes (pantallas a partir de 1025px) */
 @media (min-width: 1025px) {
     .Contenedor{
         width: 100vw;
         display: grid;
         grid-template-columns: 0.1fr 2fr;
-
     }
+
+/* #tag Tarjeta Estilos para la vista de las tarjetas MisTramites */
+    .cajaPadre {
+        display: grid;
+        grid-template-columns: 100px;
+        grid-template-areas: 
+        'expte    nombre'
+        'progreso progreso';
+        background-color: var(--container-color-dark);
+        border-radius: 26px;
+        padding: 20px;
+        transition: background-color 0.3s ease-in-out; /* Suaviza solo el cambio de color */
+        outline: none;
+        border: none;
+        cursor: pointer;
+        margin-block: 5px;
+        width: 90%;
+    }
+
     /*Ocultando botón de menú en dispositivos mas grandes*/
     .toggle-button {
         display: none !important;
     }
+}
+/* #endregion name */
+
+
+/* #region MonitoresXXL Más de 1440px */
+/* #tag Estilos para escritorios muy grandes (pantallas a partir de 1440px)  */
+@media (min-width: 1440px) {
+
     .Contenedor{
         width: 100vw;
         display: grid;
         grid-template-columns: 0.1fr 2fr;
+
     }
+
+/* #tag Tarjetas Diseño para las tarjetas de MisTramites */
+.cajaPadre {
+    display: grid;
+    grid-template-columns: 100px;
+    grid-template-areas: 
+    'expte    nombre'
+    'progreso progreso';
+    background-color: var(--container-color-dark);
+    border-radius: 26px;
+    padding: 20px;
+    transition: background-color 0.3s ease-in-out; /* Suaviza solo el cambio de color */
+    outline: none;
+    border: none;
+    cursor: pointer;
+    margin-block: 5px;
+    width: 90%;
 }
 
-/* Estilos para escritorios muy grandes (pantallas a partir de 1440px) */
-@media (min-width: 1440px) {
+
     /*Ocultando botón de menú en dispositivos mas grandes*/
     .toggle-button {
         display: none !important;
     }
 }
+/* #endregion MonitoresXXL */

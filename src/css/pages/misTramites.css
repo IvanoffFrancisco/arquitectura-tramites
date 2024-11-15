@@ -1,0 +1,11 @@
+/* Centrar el contenedor que envuelve a la tarjeta */
+.tarjeta {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start; /* Alinea los elementos al inicio (parte superior) */
+    align-items: center; /* Centra los elementos horizontalmente */
+    margin-top: 30px; /* Ajusta el espacio superior si es necesario */
+    height: 80dvh;
+    overflow-y: scroll;
+}
+

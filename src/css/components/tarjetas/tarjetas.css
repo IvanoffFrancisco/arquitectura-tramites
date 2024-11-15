@@ -1,3 +1,71 @@
-.cajaPadre {
-    background-color: aquamarine;
+.cajaPadre:hover {
+    background-color: palevioletred;
+    
+}
+
+.hijo1 {
+    display: grid;
+    color: var(--color-titulos);
+    grid-area: expte;
+    justify-content: center;
+    text-align: center;
+    align-items: center;
+    border-right: solid 1px var(--color-textos);
+}
+.hijo1 p:nth-child(1) {
+    font-size: 2rem;
+    font-weight: 700;
+    letter-spacing: 4px;
+}
+
+.hijo1 p:nth-child(2) {
+    font-size: 1.5rem;
+}
+
+.hijo2 {
+    display: grid;
+    grid-area: nombre;
+    padding-left: 20px;
+    color: var(--color-titulos);
+    justify-content: left;
+}
+
+.elemHijo2a{
+    font-size: 1.5rem;
+    font-weight: 500;
+}
+
+.elemHijo2b {
+    font-size: 1rem;
+    font-weight: 500;
+    text-align: left;
+    
+}
+
+.hijo3 {
+    display: flex;
+    flex-direction: column;
+    grid-area: progreso;
+    align-items: center;
+    justify-content: center;
+    padding: 10px;
+    padding-top: 20px;
+}
+
+
+.barra-progreso {
+    width: 100%;
+    height: 8px; /* Altura de la barra */
+    background-color: #e0e0e0; /* Color de fondo */
+    border-radius: 15px; /* Bordes redondeados */
+    overflow: hidden;
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.barra {
+    width: 50%; /* Porcentaje de progreso */
+    height: 100%;
+    background-color: #4caf50; /* Color de la barra de progreso */
+    border-radius: 15px 0 0 15px; /* Bordes redondeados a la izquierda */
+    transition: width 1s ease-in-out; /* Animación suave */
 }
