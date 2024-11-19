@@ -17,7 +17,7 @@
     backdrop-filter: blur(10px);
     background-color: var(--body-color-dark);
     font-size: 1rem;
-    overflow-y: auto;
+    /* overflow-y: auto; */
 }
 
 .nav{
@@ -134,4 +134,3 @@
 .body::-webkit-scrollbar-thumb:hover {
     background-color: #555; /* Cambio de color al pasar el cursor sobre el "scroll thumb" */
 }
-

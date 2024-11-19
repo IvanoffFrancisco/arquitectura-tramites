@@ -1,5 +1,5 @@
-import { useState } from 'react';
 import React from 'react'
+import { useState } from 'react';
 
 import '../../css/components/navBar/estilosNav.css';
 import '../../css/components/navBar/btnNav/btnNav.css'
@@ -23,19 +23,16 @@ export default function Navbar() {
     
 /**Botón para mostrar/ocultar menú */
     const [isNavVisible, setIsNavVisible] = useState(false);
-
+    
     //Función para alternar la visibilidad del menú
     const toggleNav = () => {
-        setIsNavVisible(prevState => !prevState);
+        setIsNavVisible((prevState) => !prevState);
     };
 
 
     return (
-        <div className="body">
+        <div className={`body ${isNavVisible ? 'menu-visible' : ''}`}>
         <nav className={`nav ${isNavVisible ? 'nav-visible' : 'nav-hidden'}`}>
-
-
-
         <ul className="nav__list">
             <li className="nav__item">
                 <figure className="nav__figure">
@@ -67,9 +64,7 @@ export default function Navbar() {
                 </figure>
                 <article className="nav__show">
                 <a href="#" style={{color:'#fff', textDecoration: 'none'}}>
-                        <p className="nav__name">
-                            Historial Titulares
-                        </p>
+                        <p className="nav__name">Historial Titulares</p>
                     </a>
                 </article>
             </li>
@@ -80,10 +75,7 @@ export default function Navbar() {
                     <MapIcon className='MapIcon' style={{fontSize: '30px'}} />
                 </figure>
                 <article className="nav__show">
-                
-                        <p className="nav__name">
-                            Mapa
-                        </p>
+                        <p className="nav__name">Mapa</p>
                 </article>
             </a>
             </li>
@@ -102,7 +94,7 @@ export default function Navbar() {
                 </figure>
                 <article className="nav__show">
                     <div className="nav__name nav__name--user">
-                        <h3 className="nav__username">Apellido y Nombre</h3>
+                        <p className="nav__username">Apellido y Nombre</p>
                         <p className="nav__account">Perfil</p>
                     </div>
                 </article>
@@ -113,7 +105,7 @@ export default function Navbar() {
 
     {/* Botón para alternar menú */}
     <button className='toggle-button' onClick={toggleNav}> 
-        {isNavVisible ? <CloseIcon style={{fontSize: '30px'}} /> : <MenuIcon style={{fontSize: '30px'}} />}
+    {isNavVisible ? <CloseIcon style={{ fontSize: '30px' }} /> : <MenuIcon style={{ fontSize: '30px', pointerEvents: 'auto' }} />}
     </button>
     </div>
     )

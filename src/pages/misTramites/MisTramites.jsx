@@ -1,9 +1,11 @@
 import React from 'react'
+
 //COMPONENTES BASE
 import Navbar from '../../components/navBar/Navbar'
 import MigaDePan from '../../components/breadcrumbs/migaDePan'
 import Tarjetas from '../../components/tarjeta/tarjetas';
 import TravelExploreIcon from '@mui/icons-material/TravelExplore';//Icono Buscar
+
 //CSS
 import '../../css/components/breadcrumbs/estilosBreadcrumbs.css'
 import '../../css/components/navBar/estilosNav.css'
