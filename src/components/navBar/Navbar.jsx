@@ -70,14 +70,14 @@ export default function Navbar() {
             </li>
             
             <li className="nav__item">
-            <a href="http://172.16.1.58/webMapContribuyente/" style={{color:'#fff', textDecoration: 'none'}}>
                 <figure className="nav__figure">
                     <MapIcon className='MapIcon' style={{fontSize: '30px'}} />
                 </figure>
                 <article className="nav__show">
+                <a href="http://172.16.1.58/webMapContribuyente/" style={{color:'#fff', textDecoration: 'none'}}>
                         <p className="nav__name">Mapa</p>
+                </a>
                 </article>
-            </a>
             </li>
             <li className="nav__item nav__item--down">
                 <figure className="nav__figure">

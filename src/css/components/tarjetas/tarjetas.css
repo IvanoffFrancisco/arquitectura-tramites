@@ -65,7 +65,24 @@
 .barra {
     width: 50%; /* Porcentaje de progreso */
     height: 100%;
-    background-color: #4caf50; /* Color de la barra de progreso */
+    background: linear-gradient(
+        90deg,
+        #4caf50 0%,
+        #78ff8f 25%,
+        #4caf50 50%,
+        #78ff8f 75%,
+        #4caf50 100%
+    ); /* Degradado cíclico */
+    background-size: 200% 100%; /* Hace que el degradado sea más ancho */
+    animation: color-windows 2s infinite linear; /* Animación infinita */
     border-radius: 15px 0 0 15px; /* Bordes redondeados a la izquierda */
-    transition: width 1s ease-in-out; /* Animación suave */
+}
+
+@keyframes color-windows {
+    0% {
+        background-position: 0% 0%; /* Comienza desde la izquierda */
+    }
+    100% {
+        background-position: -100% 0%; /* Termina desplazándose completamente hacia la izquierda */
+    }
 }
