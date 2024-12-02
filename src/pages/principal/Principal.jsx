@@ -12,8 +12,6 @@ import '../../css/responsive.css'
 import '../../css/global.css'
 
 
-
-
 export default function Principal() {
 return (
         <>

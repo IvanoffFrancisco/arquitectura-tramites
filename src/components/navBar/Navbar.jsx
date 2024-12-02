@@ -39,7 +39,7 @@ export default function Navbar() {
                     <PendingActionsIcon className='PendingActionsIcon' style={{fontSize: '30px'}} />
                 </figure>
                 <article className="nav__show">
-                    <a href="#" style={{color:'#fff', textDecoration: 'none'}}>
+                    <a href="/MisTramites" style={{color:'#fff', textDecoration: 'none'}}>
                         <p className="nav__name">
                             Mis tramites 
                         </p>

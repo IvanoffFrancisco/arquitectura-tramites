@@ -1,0 +1,141 @@
+:root{
+    --colorTexto: whitesmoke;
+    --colorTextoNegro: black;
+    --fondoTarjeta: palevioletred;
+    --fondoTarjetaBlanco: white;
+    --familiaTxt: sans-serif;
+}
+
+/*Membrete caja*/
+.calendario {
+    display: grid;
+    grid-template-columns: 1fr;
+    justify-items: center;/*Horizontalmente*/
+    justify-content: center;/*Verticalmente*/
+    text-wrap: wrap;
+    padding: 25px;
+    margin-top: 35px;
+    margin-inline: 35px;
+    background-color: var(--containter-color-dark);
+    color: white;
+    border-radius: 15px;
+    height: 85vh;
+    overflow-y: auto;
+    overflow-x: hidden;
+    scrollbar-width: thin;
+    scrollbar-color: #888 var(--containter-color-dark);
+    -webkit-box-shadow: 0px 0px 50px -10px rgba(0,0,0,0.75);
+    -moz-box-shadow: 0px 0px 50px -10px rgba(0,0,0,0.75);
+    box-shadow: 0px 0px 50px -10px rgba(0,0,0,0.75);
+}
+/********************************
+* Estilando las tarjetas*
+********************************/
+
+
+.contenedor1{
+    font-family: var(--familiaTxt);
+    display: flex;
+    justify-content: center;
+    align-content: center;
+    align-items: center;
+    padding: 0;
+    margin: 0;
+    
+}
+
+.contenedor2{
+    display: flex;
+    margin: 0;
+    padding: 0;
+    
+}
+
+/* .contenedor2 > svg > line{
+    stroke: palevioletred;
+} por que no le gusto*/
+
+.contenedor2 > svg > circle{
+    stroke: palevioletred;
+}
+
+.contenedor3{
+    display: flex;
+    width: 100vh;
+    flex-direction: row;
+    padding-inline-start: 25px;
+    align-items: center;
+    background-color: var(--container-color-dark);
+    border-radius: 150px;
+    /* border: solid 0.5px var(--fondoTarjeta); */
+    padding-block: 15px ;
+    margin: 0;
+    padding: 0;
+    transition: background-color 0.3s ease;
+}
+
+.contenedor3:hover, .contenedor3:hover ~ .contenedor3a{
+    background-color: var(--fondoTarjeta);
+}
+
+.contenedor3a{
+    text-align: center;
+    color: gray;
+    font-weight: 800;
+    justify-content: center ;
+    align-content: center;
+    width: 10em;
+    height: 10em;
+    border-radius: 50%;
+    background-color: var(--colorTexto);
+    box-shadow: 6px 12px 8px rgba(0, 0, 0, 0.3); /* Efecto de sombra */
+}
+
+
+
+.contenedor3a p:first-of-type {
+    font-size: 1.5rem;
+    margin: -15px;
+}
+.contenedor3a p:last-of-type {
+    font-size: 3rem;
+    margin: -20px;
+}
+
+.contenedor3b{
+    display: flex;
+    padding-inline-start: 50px;
+    width: 70%;
+}
+
+.contenedor3b > img{
+    width: 50px;
+    fill: var(--colorTexto);
+    opacity: 0.5;
+}
+
+.contenedor3b1{
+    display: flex;
+    color: var(--colorTexto);
+    flex-direction: column;
+    flex: 1;
+}
+
+.contenedor3b1 > h1{
+    margin: 0;
+    padding-top: 15px;
+    padding-bottom: 15px;
+    padding-inline-end: 50px;
+}
+
+.contenedor3b1 > p{
+    font-size: 1.2rem;
+    text-wrap: wrap;
+    text-align: justify;
+    padding-inline-end: 50px;
+}
+
+.contenedor3b1Hijo{
+    display: flex;
+    align-self: center;
+}

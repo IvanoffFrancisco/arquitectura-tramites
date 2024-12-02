@@ -1,0 +1,109 @@
+
+
+
+.cet_cajaPadre {/*Tarjeta*/
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-areas: 
+    'expte    nombre'
+    'progreso progreso';
+    width: 80%;
+    justify-content: center;
+    background-color: var(--container-color-dark);
+    border-radius: 26px;
+    padding: 20px;
+    transition: background-color 0.3s ease-in-out; /* Suaviza solo el cambio de color */
+    outline: none;
+    border: none;
+    cursor: pointer;
+    margin-block: 5px;
+}
+
+.cet_cajaPadre:hover {
+    background-color: palevioletred;
+    
+}
+
+.cet_hijo1 {
+    display: grid;
+    color: var(--color-titulos);
+    grid-area: expte;
+    justify-content: center;
+    text-align: center;
+    align-items: center;
+    border-right: solid 1px var(--color-textos);
+}
+.cet_hijo1 p:nth-child(1) {
+    font-size: 2rem;
+    font-weight: 700;
+    letter-spacing: 4px;
+}
+
+.cet_hijo1 p:nth-child(2) {
+    font-size: 1.5rem;
+}
+
+.cet_hijo2 {
+    display: grid;
+    grid-area: nombre;
+    padding-left: 20px;
+    color: var(--color-titulos);
+    justify-content: left;
+}
+
+.cet_elemHijo2a{
+    font-size: 1.5rem;
+    font-weight: 500;
+}
+
+.cet_elemHijo2b {
+    font-size: 1rem;
+    font-weight: 500;
+    text-align: left;
+    
+}
+
+.cet_hijo3 {
+    display: flex;
+    flex-direction: column;
+    grid-area: progreso;
+    align-items: center;
+    justify-content: center;
+    padding: 10px;
+    padding-top: 20px;
+}
+
+
+.cet_barra-progreso {
+    width: 100%;
+    height: 8px; /* Altura de la barra */
+    background-color: #e0e0e0; /* Color de fondo */
+    border-radius: 15px; /* Bordes redondeados */
+    overflow: hidden;
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.cet_barra {
+    width: 50%; /* Porcentaje de progreso */
+    height: 100%;
+    background: linear-gradient(
+        90deg,
+        #4caf50 0%,
+        #78ff8f 25%,
+        #4caf50 50%,
+        #78ff8f 75%,
+        #4caf50 100%
+    ); /* Degradado cíclico */
+    background-size: 200% 100%; /* Hace que el degradado sea más ancho */
+    animation: color-windows 2s infinite linear; /* Animación infinita */
+    border-radius: 15px 0 0 15px; /* Bordes redondeados a la izquierda */
+}
+
+@keyframes color-windows {
+    0% {
+        background-position: 0% 0%; /* Comienza desde la izquierda */
+    }
+    100% {
+        background-position: -100% 0%; /* Termina desplazándose completamente hacia la izquierda */
+    }
+}

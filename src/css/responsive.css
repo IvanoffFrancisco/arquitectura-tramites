@@ -157,7 +157,7 @@
 @media (min-width: 481px) and (max-width: 768px) {
     /*Ocultando botón de menú en dispositivos mas grandes*/
     .toggle-button {
-        display: none !important;
+        display: visi !important;
     }
 }
 /* #endregion Tablets */

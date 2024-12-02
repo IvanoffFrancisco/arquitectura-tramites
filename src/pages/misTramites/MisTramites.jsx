@@ -26,7 +26,7 @@ export default function MisTramites () {
                 </div>
                 <div className=''>
                     <div>
-                        <MigaDePan contenido1={<TravelExploreIcon style={{fontSize: '30px'}}/>} contenido2= {"Bienvenido"}/>
+                        <MigaDePan  contenido1={<TravelExploreIcon style={{fontSize: '30px'}}/>} contenido2= {"Bienvenido"}/>
                     </div>
                     <div className='tarjeta' >
                         <Tarjetas 
